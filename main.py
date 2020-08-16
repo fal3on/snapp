@@ -24,7 +24,7 @@ def takeSnapp():
     #genera el tiempo exacto de la captura
     now = datetime.datetime.now()
     now_str = now.strftime("%Y-%m-%d-%H-%M-%S")
-    name = 'SNAP-' + format(now_str) + '.png'
+    name = 'SNAPP-' + format(now_str) + '.png'
     #saves the SNAPP with the DATE
     screenshot.save(name)
 
@@ -44,7 +44,7 @@ def recordSnapp():
     
     #global label
     global lf_label
-    lf_label.configure(text='Recording... \nseleccione la ventana "recordg" y \npresione "q" para detenerse.')
+    lf_label.configure(text='Recording... \nseleccione la ventana "recording" y \npresione "q" para detenerse.')
 
     #gets screen size
     screen_width = snapp.winfo_screenwidth()
@@ -57,7 +57,7 @@ def recordSnapp():
 
     #naming
     now_str = now.strftime("%Y-%m-%d-%H-%M-%S")
-    name = 'SNAP-' + format(now_str) + '.avi'
+    name = 'SNAPP-' + format(now_str) + '.avi'
 
     #output
     vid = cv2.VideoWriter(name, fourcc, 20.0, (screen))
